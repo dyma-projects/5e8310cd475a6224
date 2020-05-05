@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercice1.component.css']
 })
 export class Exercice1Component implements OnInit {
-  public compteur: number = 0; 
+  public compteur: number = 0;
+  public result: number = -1;
+
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  incrementeC() {
+    this.result = this.compteur++;
+  }
+  decrementeC() {
+    this.result= this.compteur--;
+  }
 }
